@@ -2,13 +2,13 @@ import { Text, StyleSheet } from 'react-native';
 
 import { Colors } from '../utils/constans';
 
-const Title = ({ children, fontSize, border }) => {
+const Title = ({ children, fontSize, border, style }) => {
 	return (
 		<Text
 			style={
 				border
-					? [styles.title, styles.border, { fontSize: fontSize }]
-					: [styles.title, { fontSize: fontSize }]
+					? [styles.title, styles.border, style, { fontSize }]
+					: [styles.title, style, { fontSize }]
 			}
 		>
 			{children}

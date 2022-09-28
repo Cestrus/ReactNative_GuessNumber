@@ -72,11 +72,13 @@ const GameScreen = ({
 
 	return (
 		<View style={styles.container}>
-			<Title fontSize={24} border>
-				Opponent`s Guess!
-			</Title>
-			<NumberContainer fontSize={36}>{currGuessNumber}</NumberContainer>
-			<View>
+			<View style={styles.numberBlock}>
+				<Title fontSize={24} border>
+					Opponent`s Guess!
+				</Title>
+				<NumberContainer fontSize={36}>
+					{currGuessNumber}
+				</NumberContainer>
 				<Title fontSize={20}>Higher or lower?</Title>
 				<View style={styles.btnsContainer}>
 					<View style={styles.btnContainer}>
@@ -126,7 +128,11 @@ const styles = StyleSheet.create({
 		flex: 1,
 	},
 	logContainer: {
+		flex: 5,
 		height: 400,
 		overflow: 'hidden',
+	},
+	numberBlock: {
+		flex: 3,
 	},
 });
